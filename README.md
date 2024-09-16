@@ -1,0 +1,1 @@
+This repository contains a template for deploying an exploratory project with notes and observations as a website to Posit Connect.

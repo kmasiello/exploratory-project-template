@@ -1,0 +1,5 @@
+---
+title: Auth configuration  
+--- 
+
+Notes on configuring Connect with Okta/OIDC

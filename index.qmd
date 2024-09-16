@@ -1,0 +1,28 @@
+---
+title: "Exploratory Project Template"
+---
+
+This template is for exploratory work.
+
+Using Quarto notebooks for exploratory work is an excellent way to mix notes, documentation, and findings with code and scripts.
+
+📁 Document setup and configuration notes in the `config` directory.
+
+📁 Document exploratory work in the `explore` directory.
+
+## Purpose
+
+Why are we conducting this exploratory work?
+
+## Approach
+
+How will we explore?
+
+## Infrastructure Notes
+
+Accessing the infra details. 
+
+## Deployment notes
+
+This repository uses GitHub Actions to automatically re-deploy this website to Posit Connect on updates to `main`.
+

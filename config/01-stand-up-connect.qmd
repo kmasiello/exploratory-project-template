@@ -1,0 +1,76 @@
+---
+title: Install Connect
+---
+
+Vanilla install of Connect; Ubuntu 24.04, SQLite.
+
+per https://docs.posit.co/connect/admin/getting-started/local-install/manual-install/
+
+## Install Python
+
+```bash
+export PYTHON_VERSION="3.12.4"
+
+curl -O https://cdn.rstudio.com/python/ubuntu-2404/pkgs/python-${PYTHON_VERSION}_1_amd64.deb
+sudo apt-get update
+sudo apt-get install ./python-${PYTHON_VERSION}_1_amd64.deb
+
+sudo /opt/python/"${PYTHON_VERSION}"/bin/pip install \
+    --upgrade pip setuptools wheel
+
+cat << EOF | sudo tee /etc/profile.d/python.sh
+#!/bin/bash
+export PATH=/opt/python/${PYTHON_VERSION}/bin:\$PATH
+EOF
+```
+
+## Install R
+
+```bash
+export R_VERSION=4.4.1
+
+curl -O https://cdn.rstudio.com/r/ubuntu-2404/pkgs/r-${R_VERSION}_1_amd64.deb
+sudo apt-get update
+sudo apt-get install ./r-${R_VERSION}_1_amd64.deb
+
+sudo ln -s /opt/R/${R_VERSION}/bin/R /usr/local/bin/R
+sudo ln -s /opt/R/${R_VERSION}/bin/Rscript /usr/local/bin/Rscript
+
+```
+
+## Install Quarto
+
+```bash
+export QUARTO_VERSION="1.5.54"
+
+sudo mkdir -p /opt/quarto/${QUARTO_VERSION}
+
+sudo curl -o quarto.tar.gz -L \
+    "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz"
+
+sudo tar -zxvf quarto.tar.gz \
+    -C "/opt/quarto/${QUARTO_VERSION}" \
+    --strip-components=1
+    
+sudo rm quarto.tar.gz
+```
+
+## Install Connect
+
+```bash
+curl -O https://cdn.posit.co/connect/2024.08/rstudio-connect_2024.08.0~ubuntu24_amd64.deb
+sudo apt install rstudio-connect_2024.08.0~ubuntu24_amd64.deb
+```
+
+Enable Quarto and Python
+
+```{.bash filename="rstudio-connect.gcfg"}
+[Python]
+Enabled = true
+Executable = /opt/python/3.12.4/bin/python
+
+
+[Quarto]
+Enabled = true
+Executable = /opt/quarto/1.5.54/bin/quarto
+```

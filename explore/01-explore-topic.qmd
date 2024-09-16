@@ -1,0 +1,21 @@
+---
+title: Explore Topic
+---
+
+Here is where I will take notes on exploring a topic.
+
+## Plan
+
+1. Deploy some things 
+2. Test some things
+3. Change some things
+4. Learn some things
+
+
+## Deployments Notes
+
+I can easily include screenshots using the `pngpaste` utility on MacOS or `xclip` on Linux.
+
+Here's a screenshot of the Connect content dashboard.
+
+![](../images/content-dashboard.png)

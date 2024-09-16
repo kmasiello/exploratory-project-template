@@ -1,0 +1,24 @@
+project:
+  type: website
+  render:
+    - "index.qmd"
+    - "config/*.qmd"
+    - "explore/*.qmd"
+
+website:
+  title: "Exploratory Project template"
+  sidebar: 
+    contents: 
+      - section: "Stand up and configure"
+        contents: "config/*.qmd"
+      - section: "Exploratory work"
+        contents: "explore/*.qmd"
+
+format:
+  html:
+    theme: yeti
+    toc: true
+    lightbox: true
+    execute: 
+      eval: false
+      echo: true
