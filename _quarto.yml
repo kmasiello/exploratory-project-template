@@ -13,6 +13,8 @@ website:
         contents: "config/*.qmd"
       - section: "Exploratory work"
         contents: "explore/*.qmd"
+  repo-url: https://github.com/kmasiello/exploratory-project-template
+  repo-actions: [source]
 
 format:
   html:

@@ -2,7 +2,9 @@
 title: "Exploratory Project Template"
 ---
 
-This template is for exploratory work.
+This template is for exploratory work. 
+
+Clone the repository at <https://github.com/kmasiello/exploratory-project-template> and work interactively, capturing notes as you go.
 
 Using Quarto notebooks for exploratory work is an excellent way to mix notes, documentation, and findings with code and scripts.
 
