@@ -1,4 +1,4 @@
 - source: project
   connect:
     - id: 9507b228-7b97-4d50-8d7e-55dbd397b7f1
-      url: 'https://connect.posit.it/content/9507b228-7b97-4d50-8d7e-55dbd397b7f1/'
+      url: 'https://pub.current.posit.team/content/9507b228-7b97-4d50-8d7e-55dbd397b7f1/'
